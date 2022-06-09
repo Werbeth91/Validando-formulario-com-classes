@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assents/style.css" />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Formulário de Cadastro</h1>
+      <ul>
+        <li>> Nenhum campo pode estar vazio</li>
+        <li>> Usuário so poderá conter letras e/ou numenos</li>
+        <li>> Usuário deverá ter entre 3 e 12 caracteres</li>
+        <li>> senha precisa ter entre 6 e 12 caracteres</li>
+      </ul>
+
+      <form action="#" method="POST" class="form">
+        <label>Nome</label>
+        <input
+          type="text"
+          class="nome valido"
+          placeholder="Digite seu nome..."
+        />
+        <label>Sobrenome</label>
+        <input
+          type="text"
+          class="Sobrenome valido"
+          placeholder="Digite seu sobrenome..."
+        />
+        <label>Usuário</label>
+        <input
+          type="text"
+          class="usuario valido"
+          placeholder="Digite o nome de Usuário..."
+        />
+        <label>cpf: </label>
+        <input type="text" class="cpf valido" placeholder="Digite seu CPF..." />
+
+        <label>Senha</label>
+        <input
+          type="password"
+          class="senha1 valido"
+          placeholder="Digite sua senha..."
+        />
+        <label>Confirma senha</label>
+        <input
+          type="password"
+          class="senha2 valido"
+          placeholder="Confirme sua senha..."
+        />
+        <button class="btn" type="submit">Enviar</button>
+      </form>
+    </div>
+    <script src="./JS/validandoCpf.js"></script>
+    <script src="./JS/app.js"></script>
+  </body>
+</html>
