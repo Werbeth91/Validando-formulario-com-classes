@@ -8,7 +8,7 @@ class ValidandoFormulario {
       this.enviarForm(event);
     });
   }
-
+  //método que enviar o formulario depois de validado
   enviarForm(event) {
     event.preventDefault();
     const inputsValidados = this.validandoCamposDosInputs();
@@ -19,7 +19,7 @@ class ValidandoFormulario {
       this.form.submit();
     }
   }
-
+  //método que valida as senhas
   validandoSenhas() {
     let senhaValida = true;
 
@@ -66,6 +66,7 @@ class ValidandoFormulario {
     }
     return inputValido;
   }
+  //metodo que valida o campo usuario
   validandoUsuario(input) {
     const usuario = input.value;
     let validado = true;
@@ -85,6 +86,7 @@ class ValidandoFormulario {
     }
     return validado;
   }
+  //método que valida o compo cpf
   validandoCPF(input) {
     const cpf = new ValidarCPF(input.value);
 
@@ -94,6 +96,7 @@ class ValidandoFormulario {
     }
     return true;
   }
+  //métod que cria a mensagem de erro e coloca a abaixo do input náo validado
   criarMsgDeErro(input, mensagem) {
     const div = document.createElement("div");
     div.innerHTML = mensagem;

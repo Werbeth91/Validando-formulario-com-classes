@@ -7,6 +7,7 @@ class ValidarCPF {
       value: cpfRecebido.replace(/\D+/g, ""),
     });
   }
+  //método que confere todas as validadações
   validacao() {
     if (!this.cpfSemCaracteres) return false;
     if (typeof this.cpfSemCaracteres !== "string") return false;
@@ -16,9 +17,11 @@ class ValidarCPF {
     console.log(this.cpfDeValidacao);
     return this.cpfDeValidacao === this.cpfSemCaracteres;
   }
+  //método que conferi se o cpf não é uma sequencia de numeros iguais
   verificarSequencia() {
     return this.cpfSemCaracteres.charAt(0).repeat(11) === this.cpfSemCaracteres;
   }
+  //método que gera o cpf que vai ser usado de comparação
   gerarCpfDeValidacao() {
     const cpfSemDigitos = this.cpfSemCaracteres.slice(0, -2);
     const digito1 = ValidarCPF.validarDigito(cpfSemDigitos);
@@ -26,6 +29,7 @@ class ValidarCPF {
 
     this.cpfDeValidacao = cpfSemDigitos + digito1 + digito2;
   }
+  //método estatico que vai calcular os digitos do cpf recebido
   static validarDigito(cpfSemDigitos) {
     let soma = 0;
     let multiplicador = cpfSemDigitos.length + 1;
