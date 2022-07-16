@@ -14,7 +14,7 @@ o campo "cpf" so aceita cpfs realmente válidos
 ## Maneiras de utilizar, testar ou vizualizar
   
   Modo 1: Copiando o código pro seu computador e abrir direto no navegador <br/>
-  Modo 2 : Clicando no Link [meu formulário]()
+  Modo 2 : Clicando no Link [meu formulário](https://werbeth91.github.io/Validando-meu-formulario/)
   
 
 
