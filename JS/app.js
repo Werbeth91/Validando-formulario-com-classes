@@ -54,8 +54,11 @@ class ValidandoFormulario {
       const label = input.previousElementSibling.innerText;
 
       if (!input.value) {
+        input.classList.add("input-invalido");
         this.criarMsgDeErro(input, `O campo "${label}" nao pode estar vazio`);
         inputValido = false;
+      } else {
+        input.classList.remove("input-invalido");
       }
       if (input.classList.contains("cpf")) {
         if (!this.validandoCPF(input)) inputValido = false;
@@ -84,6 +87,11 @@ class ValidandoFormulario {
       );
       validado = false;
     }
+    if (validado === false) {
+      input.classList.add("input-invalido");
+    } else {
+      input.classList.remove("input-invalido");
+    }
     return validado;
   }
   //método que valida o compo cpf
@@ -92,8 +100,10 @@ class ValidandoFormulario {
 
     if (!cpf.validacao()) {
       this.criarMsgDeErro(input, "CPF inválido");
+      input.classList.add("input-invalido");
       return false;
     }
+    input.classList.remove("input-invalido");
     return true;
   }
   //métod que cria a mensagem de erro e coloca a abaixo do input náo validado

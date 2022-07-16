@@ -15,7 +15,7 @@ body {
 .container {
   background-color: rgb(44, 44, 103);
   margin: 50px auto;
-  width: 50%;
+  max-width: 400px;
   padding: 20px;
   border-radius: 10px;
   color: white;
@@ -32,12 +32,10 @@ li {
   outline: none;
   font-size: 15px;
   margin-bottom: 10px;
+  border-radius: 5px;
 }
 .form input::placeholder {
   font-style: italic;
-}
-.form input:focus {
-  border-color: rgb(98, 200, 200);
 }
 .form label {
   font-size: 16px;
@@ -64,4 +62,7 @@ li {
   color: orange;
   margin-bottom: 10px;
   font-style: italic;
+}
+.input-invalido {
+  border: 1px solid red;
 }
